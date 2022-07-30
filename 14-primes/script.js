@@ -7,17 +7,6 @@
 */
 
 function primes(num) {
-    let res = [];
-    for (let i = 2; i <= num; i++) {
-            res[i] = res.push(num[i]);
-        if (res[i] <= 1) delete res[i];
-        if (res[i] % 2 === 0 && res[i] > 2) delete res[i];
-        for (let i = 3; i <= Math.sqrt(res[i]); i += 2) {
-        if (res[i] % i === 0) delete res[i];}
-    }
-
-    return res;
-
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
