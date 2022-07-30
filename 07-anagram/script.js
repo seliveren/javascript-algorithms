@@ -10,10 +10,10 @@
 
 function anagram(str1, str2) {
     if (typeof(str1) === 'string' && typeof(str2) === 'string' && str1.length !== 0 && str2.length !== 0) {
-        const a = str1.toLowerCase().split('');
-        const b = str2.toLowerCase().split('');
-        for (let i = 0; i < a.length; i++)
-            if (a.length === b.length && a[i] === b[i] && a.join() !== b.join()) {
+        const firstString = str1.toLowerCase().split('');
+        const secondString = str2.toLowerCase().split('');
+        for (let i = 0; i < firstString.length; i++)
+            if (firstString.length === secondString.length && firstString[i] === secondString[i] && firstString.join() !== secondString.join()) {
                 return true
             } else {
                 return false
