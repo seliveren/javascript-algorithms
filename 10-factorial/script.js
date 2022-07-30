@@ -8,7 +8,15 @@
 */
 
 function factorial(n) {
-    // Напишите код здесь
+    if (n >= 0 && typeof(n) === 'number') {
+        if (n === 0 || n === 1) return 1;
+        for (let i = n - 1; i >= 1; i--) {
+            n *= i;
+        }
+        return n;
+    } else {
+        console.log('используйте неотрицательное число')
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
@@ -16,3 +24,5 @@ function factorial(n) {
 console.log(factorial(0)); // 1
 console.log(factorial(1)); // 1
 console.log(factorial(6)); // 720
+
+

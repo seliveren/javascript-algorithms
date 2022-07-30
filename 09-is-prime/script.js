@@ -10,7 +10,18 @@
 */
 
 function isPrime(n) {
-    // Напишите код здесь
+    if (typeof(n) === 'number') {
+        if (n <= 1) return false
+        if (n % 2 === 0 && n > 2) return false
+
+            for (let i = 3; i <= Math.sqrt(n); i += 2) {
+                if (n % i === 0) return false;
+            }
+            return true;
+        }
+      else {
+        console.log('функция принимает только числа')
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
